@@ -1,0 +1,27 @@
+@import '../../styles/mixins.scss';
+
+.nav-list {
+  @include reset-list();
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-list__link {
+  display: inline-block;
+  padding: 30px;
+  font-weight: 600;
+  color: var(--nav-text-color);
+  text-decoration: none;
+  transition:
+    color .3s ease,
+    background-color .3s ease,
+    opacity .3s ease;
+
+  &:hover {
+    color: var(--black);
+    background-color: var(--grey);
+  }
+  &:active {
+    opacity: .8;
+  }
+}
