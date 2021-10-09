@@ -118,3 +118,119 @@
 .product__order-button {
   margin-bottom: 15px;
 }
+
+.product__details {
+  margin-bottom: 140px;
+}
+
+.tabs__list {
+  margin-bottom: 30px;
+  background: 0;
+}
+
+.tabs__button {
+  @include reset-btn();
+  min-width: 195px;
+  border: 1px solid var(--grey);
+  padding: 10px 14px;
+  font-size: 20px;
+  line-height: 28px;
+  transition:
+    border-color .3s ease,
+    background-color .3s ease,
+    color .3s ease;
+
+  &:hover,
+  &:focus,
+  &[data-selected] {
+    border-color: var(--red);
+    background-color: var(--red);
+    color: var(--white);
+  }
+
+  &:active:not([data-selected]) {
+    background-color: var(--dark-red);
+  }
+}
+
+.product__specifications {
+  table {
+    display: flex;
+    flex-direction: column;
+    max-width: 565px;
+  }
+
+  tr {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 7px;
+    border-bottom: 1px solid var(--grey);
+
+    &:not(:first-child) {
+      padding-top: 18px;
+    }
+  }
+}
+
+.product__contacts:not([hidden]) {
+  display: flex;
+
+  b {
+    margin-bottom: 6px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  p {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 600;
+    color: var(--black-text);
+
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+  }
+
+  a {
+    position: relative;
+    color: var(--black-text);
+    text-decoration: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 1px;
+      background-color: var(--black-text);
+      opacity: 0;
+      transition:
+        width .3s ease,
+        opacity .3s ease;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      width: 100%;
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: .8;
+    }
+  }
+}
+
+.product__contacts-map {
+  flex: 1;
+  max-width: 430px;
+  margin-left: 103px;
+  background: url(./map.png) 0 0 no-repeat;
+}
