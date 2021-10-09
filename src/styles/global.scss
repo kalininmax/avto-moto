@@ -1,3 +1,5 @@
+@import './mixins.scss';
+
 *::before,
 *::after {
   box-sizing: border-box;
@@ -10,7 +12,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: var(--white, #fff);
-  color: var(--black, #000);
+  color: var(--text-color, #000);
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
@@ -33,4 +35,43 @@ body {
 
 .container {
   max-width: 1165px;
+  margin: 0 auto;
+}
+
+.button {
+  @include reset-btn();
+  padding: 16px 19px;
+  border: 1px solid var(--red);
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--red);
+  transition: 
+    color .3s ease,
+    background-color .3s ease,
+    opacity .3s ease;
+  
+  &:hover {
+    color: var(--white);
+    background-color: var(--red);
+  }
+
+  &:active {
+    opacity: .8;
+  }
+
+  &--primary {
+    color: var(--white);
+    background-color: var(--red);
+
+    &:hover,
+    &:focus {
+      background-color: var(--dark-red);
+    }
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
 }
