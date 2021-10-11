@@ -30,6 +30,10 @@
   font-size: 14px;
   line-height: 50px;
   font-weight: 400;
+
+  &--hidden {
+    opacity: 0;
+  }
 }
 
 .review-form__field {
@@ -64,17 +68,16 @@
     resize: none;
   }
 
-  input:focus + .review-form__label,
-  textarea:focus + .review-form__label {
-    opacity: 0;
-  }
-
   input[required] + .review-form__label::before,
   textarea[required] + .review-form__label::before {
     content: '*';
     font-size: 14px;
     font-weight: 700;
     color: var(--red);
+  }
+
+  .review-form__warning-input {
+    border-color: var(--basic-red);
   }
 }
 
@@ -85,4 +88,14 @@
 .review-form__submit {
   margin: 0 auto;
   margin-top: 30px;
+}
+
+.review-form__warning-text {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 400;
+  color: var(--basic-red);
 }
