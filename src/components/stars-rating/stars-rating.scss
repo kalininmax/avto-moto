@@ -1,0 +1,25 @@
+.stars-rating {
+  display: inline-flex;
+  transform: scaleX(-1);
+
+  label {
+    display: flex;
+    cursor: pointer;
+
+    &:hover .stars-rating__icon {
+      fill: var(--red);
+    }
+    &:hover~label .stars-rating__icon {
+      fill: var(--red);
+    }
+  }
+}
+
+.stars-rating__icon {
+  fill: var(--star-color);
+  transition: fill .3s ease;
+}
+
+.stars-rating__input:checked ~ label .stars-rating__icon {
+  fill: var(--red);
+}
