@@ -172,6 +172,24 @@
   }
 }
 
+.product__reviews {
+  position: relative;
+
+  ul {
+    @include reset-list();
+  }
+}
+
+.product__review {
+  margin-bottom: 20px;
+}
+
+.product__revew-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .product__contacts:not([hidden]) {
   display: flex;
 

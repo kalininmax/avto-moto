@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet'
+import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@reach/tabs";
 import Header from '../header/header';
 import Footer from '../footer/footer';
 import Gallery from '../gallery/gallery';
-import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@reach/tabs";
+import Review from '../review/review';
+import ReviewForm from '../review-form/review-form';
+import ModalWindow from '../modal-window/modal-window';
+import Map from '../map/map';
 
 import OpenSansRegular from '../../fonts/opensans-regular.woff2';
 import OpenSansSemiBold from '../../fonts/opensans-semibold.woff2';
@@ -11,9 +15,18 @@ import OpenSansBold from '../../fonts/opensans-bold.woff2';
 import "@reach/tabs/styles.css";
 import './product-screen.scss';
 
-import { PRODUCT } from '../../data';
+import { PRODUCT, REVIEWS } from '../../data';
 
 function ProductScreen() {
+
+  const [showReviewForm, setShowReviewForm] = useState(false);
+
+  const onReviewFormLinkClick = evt => {
+    evt.preventDefault();
+
+    setShowReviewForm(true);
+  }
+
   return (
     <>
       <Helmet>
@@ -60,7 +73,12 @@ function ProductScreen() {
                   </tbody>
                 </table>
               </TabPanel>
-              <TabPanel className="tabs__content"></TabPanel>
+              <TabPanel className="product__reviews">
+                <ul>
+                  { REVIEWS.map(review => <Review key={review.id} className="product__review" review={review}/>) }
+                </ul>
+                <a href="#review-form" className="product__revew-button button button--uppercase" onClick={onReviewFormLinkClick}>Оставить отзыв</a>
+              </TabPanel>
               <TabPanel className="product__contacts">
                 <div className="product__contacts-inner">
                   <p>
@@ -81,11 +99,16 @@ function ProductScreen() {
                     <a href="mailto:info@avto-moto.ru">info@avto-moto.ru</a>
                   </p>
                 </div>
-                <div className="product__contacts-map"></div>
+                <div className="product__contacts-map">
+                  <Map/>
+                </div>
               </TabPanel>
             </TabPanels>
           </Tabs>
         </section>
+        <ModalWindow active={showReviewForm} setActive={setShowReviewForm}>
+          <ReviewForm/>
+        </ModalWindow>
       </main>
       <Footer/>
     </>
