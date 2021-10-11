@@ -24,14 +24,14 @@ function Map(props) {
         map.getCenter(),
         { hintContent: 'Набережная реки Карповки, дом 5' },
         {
+          iconLayout: 'default#image',
           iconImageHref: PinIcon,
           iconImageSize: MARKER_SIZES,
         },
       );
   
       map.geoObjects.add(marker);
-    }
-    )
+    })
   }, []);
 
   return <div id="map" className={cn('map', mapClassName)}></div>;
