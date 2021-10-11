@@ -6,8 +6,13 @@
     z-index: 1;
   }
 
+  .image-gallery-thumbnails-container {
+    cursor: default;
+  }
+
   .image-gallery-thumbnail {
     width: auto;
+    pointer-events: none;
 
     &:not(:last-child) {
       margin-right: 15px;
