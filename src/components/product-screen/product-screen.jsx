@@ -19,7 +19,18 @@ import { PRODUCT, REVIEWS } from '../../data';
 
 function ProductScreen() {
 
+  const localStoregeReviews = localStorage.getItem('reviews') ? JSON.parse(localStorage.getItem('reviews')) : [];
+  const allReviews = localStoregeReviews !== [] ? [...REVIEWS, ...localStoregeReviews] : REVIEWS;
   const [showReviewForm, setShowReviewForm] = useState(false);
+  const [reviews, setReviews] = useState(allReviews);
+
+  const onReviewFormSumbit = review => {
+    setReviews([...reviews, review]);
+    localStoregeReviews.push(review);
+    setShowReviewForm(false);
+    
+    localStorage.setItem('reviews', JSON.stringify(localStoregeReviews));
+  }
 
   const onReviewFormLinkClick = evt => {
     evt.preventDefault();
@@ -75,7 +86,7 @@ function ProductScreen() {
               </TabPanel>
               <TabPanel className="product__reviews">
                 <ul>
-                  { REVIEWS.map(review => <Review key={review.id} className="product__review" review={review}/>) }
+                  { reviews.map(review => <Review key={review.id} className="product__review" review={review}/>) }
                 </ul>
                 <a href="#review-form" className="product__revew-button button button--uppercase" onClick={onReviewFormLinkClick}>Оставить отзыв</a>
               </TabPanel>
@@ -107,7 +118,7 @@ function ProductScreen() {
           </Tabs>
         </section>
         <ModalWindow active={showReviewForm} setActive={setShowReviewForm}>
-          <ReviewForm/>
+          <ReviewForm active={showReviewForm} reviews={reviews} onSubmit={onReviewFormSumbit}/>
         </ModalWindow>
       </main>
       <Footer/>
