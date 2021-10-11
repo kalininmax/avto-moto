@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
+import { humanizeDate } from '../../scripts/utils';
 import './review.scss';
+
+const BAD_RATING = 2;
 
 function Review(props) {
   const { review, className: reviewClassName } = props;
@@ -20,12 +23,12 @@ function Review(props) {
         <span style={{ width: `${review.rating * 20}%` }}></span>
       </p>
       <span className="review__resume">
-        { review.rating > 2 ? 'Советует' : 'Не советует' }
+        { review.rating > BAD_RATING ? 'Советует' : 'Не советует' }
       </span>
     </div>
     <div className="review__inner">
       <time className="review__time" dateTime="2021-10-10">
-        1 минуту назад
+        { humanizeDate(review.time, 'relative') === 'минуту назад' ? '1 минуту назад' : humanizeDate(review.time, 'relative')}
       </time>
       <button className="review__reply-button" type="button">Ответить</button>
     </div>
@@ -39,7 +42,8 @@ Review.propTypes = {
     advantages: PropTypes.string.isRequired,
     disadvantages: PropTypes.string.isRequired,
     comment: PropTypes.string,
-    rating: PropTypes.number.isRequired
+    rating: PropTypes.number.isRequired,
+    time: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
   }),
   className: PropTypes.string
 };
