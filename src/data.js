@@ -68,6 +68,7 @@ const PRODUCT = {
 
 const REVIEWS = [
   {
+    id: 1,
     author: 'Борис Иванов',
     advantages: 'мощность, внешний вид',
     disadvantages: 'Слабые тормозные колодки (пришлось заменить)',
@@ -75,6 +76,7 @@ const REVIEWS = [
     rating: 3
   },
   {
+    id: 2,
     author: 'Марсель Исмагилов',
     advantages: 'Cтиль, комфорт, управляемость',
     disadvantages: ' Дорогой ремонт и обслуживание',
@@ -85,5 +87,5 @@ const REVIEWS = [
 
 export {
   PRODUCT,
-  REVIEWS
+  REVIEWS,
 }
