@@ -47,8 +47,8 @@ const PRODUCT = {
       thumbnailWidth: 128,
       thumbnailHeight: 80,
       thumbnailAlt: 'Миниатюра 1',
-      sizes: false,
-      originalTitle: false
+      sizes: null,
+      originalTitle: null
     },
     {
       original: 'images/photo-2.jpg',
@@ -60,8 +60,8 @@ const PRODUCT = {
       thumbnailWidth: 128,
       thumbnailHeight: 80,
       thumbnailAlt: 'Миниатюра 2',
-      sizes: false,
-      originalTitle: false
+      sizes: null,
+      originalTitle: null
     },
     {
       original: 'images/photo-3.jpg',
@@ -73,8 +73,8 @@ const PRODUCT = {
       thumbnailWidth: 128,
       thumbnailHeight: 80,
       thumbnailAlt: 'Миниатюра 3',
-      sizes: false,
-      originalTitle: false
+      sizes: null,
+      originalTitle: null
     }
   ],
   label: 'New model'
