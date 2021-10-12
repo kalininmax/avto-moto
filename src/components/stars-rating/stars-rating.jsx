@@ -22,7 +22,7 @@ function StarsRating(props) {
               checked={ratingValue === number}
               value={`${number}`}
             />
-            <label htmlFor={`${number}-stars`}>
+            <label htmlFor={`${number}-stars`} aria-label="Рейтинг">
               <StarIcon className="stars-rating__icon" width="27" height="27"/>
             </label>
           </React.Fragment>
