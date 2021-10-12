@@ -42,27 +42,39 @@ const PRODUCT = {
       srcSet: 'images/photo-1@2x.jpg 2x',
       originalWidth: 600,
       originalHeight: 375,
+      originalAlt: 'Машина',
       thumbnail: 'images/photo-1-thumb.jpg',
       thumbnailWidth: 128,
-      thumbnailHeight: 80
+      thumbnailHeight: 80,
+      thumbnailAlt: 'Миниатюра 1',
+      sizes: false,
+      originalTitle: false
     },
     {
       original: 'images/photo-2.jpg',
       srcSet: 'images/photo-2@2x.jpg 2x',
       originalWidth: 600,
       originalHeight: 375,
+      originalAlt: 'Интерьер',
       thumbnail: 'images/photo-2-thumb.jpg',
       thumbnailWidth: 128,
-      thumbnailHeight: 80
+      thumbnailHeight: 80,
+      thumbnailAlt: 'Миниатюра 2',
+      sizes: false,
+      originalTitle: false
     },
     {
       original: 'images/photo-3.jpg',
       srcSet: 'images/photo-3@2x.jpg 2x',
       originalWidth: 600,
       originalHeight: 375,
+      originalAlt: 'Спидометр',
       thumbnail: 'images/photo-3-thumb.jpg',
       thumbnailWidth: 128,
-      thumbnailHeight: 80
+      thumbnailHeight: 80,
+      thumbnailAlt: 'Миниатюра 3',
+      sizes: false,
+      originalTitle: false
     }
   ],
   label: 'New model'
