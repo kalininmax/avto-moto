@@ -12,9 +12,9 @@ function Review(props) {
   return <li className={cn('review', reviewClassName)}>
     <p className="review__author">{ review.author }</p>
     <b className="review__title review__title--plus">Достоинства</b>
-    <p className="review__advantages">{ review.advantages }</p>
+    <p className="review__advantages">{ review.advantages || 'Нет' }</p>
     <b className="review__title review__title--minus">Недостатки</b>
-    <p className="review__disadvantages">{ review.disadvantages }</p>
+    <p className="review__disadvantages">{ review.disadvantages || 'Нет' }</p>
     <b className="review__title">Комментарий</b>
     <p className="review__comment">{ review.comment }</p>
     <div className="review__rating">
