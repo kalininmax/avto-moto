@@ -89,9 +89,6 @@ const REVIEWS = [
   }
 ];
 
-console.log(dayjs().subtract(1, 'minute'));
-
-
 export {
   PRODUCT,
   REVIEWS,
