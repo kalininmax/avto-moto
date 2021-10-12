@@ -39,9 +39,13 @@ body {
   margin: 0 auto;
 }
 
+.overflow-hidden {
+  overflow: hidden
+}
+
 .button {
   @include reset-btn();
-  padding: 16px 19px;
+  padding: 16px;
   border: 1px solid var(--red);
   font-size: 14px;
   line-height: 18px;

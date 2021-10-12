@@ -44,6 +44,7 @@ function ProductScreen() {
         <link rel="preload" href={OpenSansRegular} type="font/woff2" as="font" crossOrigin="anonymous"/>
         <link rel="preload" href={OpenSansSemiBold} type="font/woff2" as="font" crossOrigin="anonymous"/>
         <link rel="preload" href={OpenSansBold} type="font/woff2" as="font" crossOrigin="anonymous"/>
+        <body className={showReviewForm && 'overflow-hidden'}/>
       </Helmet>
       <Header className="app__header"/>
       <main>
