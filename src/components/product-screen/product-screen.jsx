@@ -121,7 +121,7 @@ function ProductScreen() {
           <ReviewForm active={showReviewForm} reviews={reviews} onSubmit={onReviewFormSumbit}/>
         </ModalWindow>
       </main>
-      <Footer/>
+      <Footer className="app_footer"/>
     </>
   )
 }
