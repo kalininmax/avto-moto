@@ -64,8 +64,8 @@ function ProductScreen() {
               <b className="product__price-new">{PRODUCT.price.new.toLocaleString('ru-RU')} ₽</b>
               <span className="product__price-old">{PRODUCT.price.old.toLocaleString('ru-RU')} ₽</span>
             </p>
-            <a className="product__order-button button button--primary button--uppercase" href="##">Оставить заявку</a>
-            <a className="product__credit-button button button--uppercase" href="##">В кредит от 11 000 ₽</a>
+            <a className="product__order-button button button--primary button--uppercase" href="#order">Оставить заявку</a>
+            <a className="product__credit-button button button--uppercase" href="#credit">В кредит от 11 000 ₽</a>
           </div>
           <Tabs className="product__details tabs">
             <TabList className="tabs__list">
