@@ -2,7 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 630px;
+  width: 630px;
+  column-gap: 30px;
 }
 
 .review-form__inner {
@@ -39,6 +40,7 @@
 .review-form__field {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   font-size: 15px;
   line-height: 20px;
@@ -49,8 +51,13 @@
   }
 
   &--rating {
-    padding-top: 7px;
+    column-gap: 15px;
+    padding: 7px 0;
     letter-spacing: -0.1px;
+
+    &:focus-within {
+      box-shadow: 0 0 1px 1px var(--dark-grey);
+    }
   }
 
   input,
@@ -62,6 +69,11 @@
     font: inherit;
     line-height: 48px;
     color: inherit;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 1px var(--dark-grey);
+    }
   }
 
   textarea {
@@ -83,10 +95,6 @@
   .review-form__warning-input {
     border-color: var(--basic-red);
   }
-}
-
-.review-form__rating {
-  margin-left: 15px;
 }
 
 .review-form__submit {
