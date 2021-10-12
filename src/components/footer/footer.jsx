@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import cn from 'classnames';
 import NavList from '../nav-list/nav-list';
 import './footer.scss';
 
@@ -12,12 +14,18 @@ const PAGES = [
   { title: 'Test drive', route: 'test-drive' }
 ];
 
-function Footer() {
-  return <footer className="footer">
+function Footer(props) {
+  const { className: footerClassName } = props;
+
+  return <footer className={cn('footer', footerClassName)}>
     <div className="container footer__container">
       <NavList className="footer__nav" list={PAGES} />
     </div>
   </footer>;
 }
+
+Footer.propTypes = {
+  className: PropTypes.string
+};
 
 export default Footer;
