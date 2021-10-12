@@ -46,7 +46,9 @@ Gallery.propTypes = {
     originalHeight: PropTypes.number,
     thumbnail: PropTypes.string,
     thumbnailWidth: PropTypes.number,
-    thumbnailHeight: PropTypes.number
+    thumbnailHeight: PropTypes.number,
+    sizes: PropTypes.string,
+    originalTitle: PropTypes.string
   })),
   className: PropTypes.string
 };
