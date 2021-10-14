@@ -9,13 +9,21 @@
     margin-bottom: 13px;
     font-size: 15px;
     line-height: 20px;
-    letter-spacing: -0.1px;
   }
   
   .review__author {
+    padding-left: 1px;
     font-size: 20px;
     line-height: 27px;
     font-weight: 600;
+  }
+
+  .review__disadvantages {
+    margin-bottom: 11px;
+  }
+
+  .review__rating-stars {
+    margin-left: -1px;
   }
 }
 
@@ -28,7 +36,7 @@
   font-weight: 600;
 
   &::before {
-    margin-right: 10px;
+    margin-right: 11px;
     font-family: var(--font-family);
     font-size: 15px;
     line-height: 20px;
@@ -62,7 +70,7 @@
   width: 103px;
   height: 16px;
   background: url(./stars.svg) 0 0 no-repeat;
-  background-size: 103px 16px;
+  background-size: 105px 16px;
 
   span {
     display: inline-block;
@@ -75,7 +83,7 @@
       width: 103px;
       height: 16px;
       background: url(./star-active.svg) 0 0 no-repeat;
-      background-size: 103px 16px;
+      background-size: 105px 16px;
     }
   }
 }
@@ -89,12 +97,13 @@
 }
 
 .review__resume {
+  margin-top: -4px;
   margin-left: 20px;
   color: var(--red);
 }
 
 .review__time {
-  margin-right: 25px;
+  margin-right: 28px;
   font-size: 14px;
   line-height: 19px;
   color: var(--black);
@@ -103,5 +112,6 @@
 
 .review__reply-button {
   @include reset-btn();
+  margin-top: 2px;
   color: var(--red);
 }

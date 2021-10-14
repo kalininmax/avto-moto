@@ -99,15 +99,15 @@ function ProductScreen() {
                     набережная реки Карповки, дом 5
                   </p>
                   <p>
-                    <b>Режим работы</b>
+                    <b className="product__contacts-title">Режим работы</b>
                     Ежедневно, с 10:00 до 21:00
                   </p>
                   <p>
-                    <b>Телефон</b>
+                    <b className="product__contacts-title product__contacts-title--phone">Телефон</b>
                     <a href="tel:88003335599">8 (800) 333-55-99</a>
                   </p>
                   <p>
-                    <b>E-mail</b>
+                    <b className="product__contacts-title product__contacts-title--mail">E-mail</b>
                     <a href="mailto:info@avto-moto.ru">info@avto-moto.ru</a>
                   </p>
                 </div>

@@ -27,14 +27,15 @@
   transform: translateX(-50%);
   z-index: 100;
   padding: 35px;
+  padding-top: 32px;
   background-color: var(--white);
 }
 
 .modal-window__button-close {
   @include reset-btn();
   position: absolute;
-  top: 7px;
-  right: 7px;
+  top: 8px;
+  right: 8px;
   width: 50px;
   height: 50px;
   transition: opacity .3s ease;
