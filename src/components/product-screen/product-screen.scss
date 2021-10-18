@@ -232,6 +232,8 @@
 
 .product__contacts:not([hidden]) {
   display: flex;
+  align-items: flex-start;
+  max-width: 778px;
 
   b {
     margin-bottom: 10px;
