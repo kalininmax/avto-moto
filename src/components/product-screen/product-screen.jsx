@@ -75,7 +75,7 @@ function ProductScreen() {
               <Tab className="tabs__button">Контакты</Tab>
             </TabList>
             <TabPanels className="tabs__panels">
-              <TabPanel className="product__specifications">
+              <TabPanel tabIndex="-1" className="product__specifications">
                 <table>
                   <tbody>
                     { PRODUCT.specifications.map(spec => <tr key={spec.name}>
@@ -85,13 +85,13 @@ function ProductScreen() {
                   </tbody>
                 </table>
               </TabPanel>
-              <TabPanel className="product__reviews">
+              <TabPanel tabIndex="-1" className="product__reviews">
                 <ul>
                   { reviews.map(review => <Review key={review.id} className="product__review" review={review}/>) }
                 </ul>
                 <a href="#review-form" className="product__revew-button button button--uppercase" onClick={onReviewFormLinkClick}>Оставить отзыв</a>
               </TabPanel>
-              <TabPanel className="product__contacts">
+              <TabPanel tabIndex="-1" className="product__contacts">
                 <div className="product__contacts-inner">
                   <p>
                     <b>Адрес</b>
