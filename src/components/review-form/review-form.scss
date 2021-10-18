@@ -78,7 +78,11 @@
   }
 
   textarea {
+    box-sizing: border-box;
     min-height: 116px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 26px;
     resize: none;
   }
 
