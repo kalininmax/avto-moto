@@ -17,7 +17,7 @@ function SiteNav(props) {
   const { className: siteNavClassName } = props;
 
   return <nav className={cn('site-nav', 'container', siteNavClassName)}>
-      <NavLink className="site-nav__logo-link" to="/" aria-label="На главную">
+      <NavLink className="site-nav__logo-link" to="#" aria-label="На главную">
         <SiteLogo className="site-nav__logo" />
       </NavLink>
       <NavList className="site-nav__list" list={PAGES} />
