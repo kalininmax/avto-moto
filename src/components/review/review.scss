@@ -114,4 +114,15 @@
   @include reset-btn();
   margin-top: 2px;
   color: var(--red);
+  transition: 
+    color .3s,
+    opacity .3s;
+
+  &:hover {
+    color: var(--dark-red);
+  }
+
+  &:active {
+    opacity: .4;
+  }
 }

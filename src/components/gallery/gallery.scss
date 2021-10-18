@@ -63,7 +63,8 @@
     transform: rotate(45deg);
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     box-shadow: 0px 2px 7px var(--grey);
   }
 

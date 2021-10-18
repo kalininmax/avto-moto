@@ -17,7 +17,8 @@
     background-color .3s ease,
     opacity .3s ease;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--black);
     background-color: var(--grey);
   }

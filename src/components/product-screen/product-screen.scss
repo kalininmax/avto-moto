@@ -157,13 +157,13 @@
     color .3s ease;
 
   &:hover,
-  &:focus,
   &[data-selected] {
     border-color: var(--red);
     background-color: var(--red);
     color: var(--white);
   }
 
+  &:focus,
   &:active:not([data-selected]) {
     background-color: var(--dark-red);
   }
